@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Xun Fu's Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #f2f4f5 0%, #2575fc 100%);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            border-radius: 5%;
+            margin-right: 20px;
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .group-photo {
+        width: 100%; /* 调整宽度以适应父容器的宽度 */
+        max-width: 300px; /* 设置最大宽度限制 */
+        height: 200px; /* 设置固定高度 */
+        object-fit: cover; /* 裁剪并填充区域，保持纵横比 */
+        margin: 10px; /* 在图片周围添加一些空间 */
+        display: inline-block; /* 使图片并排显示 */
+        border-radius: 5px; /* 可选：添加圆角 */
+        }
+        .photo-gallery {
+            text-align: center; /* 居中图片 */
+            padding: 20px 0; /* 在图片上下添加一些空间 */
+        }
+
+        .advisor-info {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+
+        .advisor-photo {
+            width: 50px; /* 控制图片大小 */
+            height: 60px; /* 控制图片大小 */
+            margin-right: 10px;
+            border-radius: 5px; /* 可选的圆角 */
+            object-fit: cover;
+        }
+
+        .menu {
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .menu button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu button:hover, .menu .active {
+            background-color: #495057;
+        }
+        .section {
+            display: none;
+            padding: 20px 40px;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="xun fu.jpg" alt="Profile Photo">
+        <h1>Xun Fu</h1>
+    </div>
+    <div class="menu">
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('education')">Education</button>
+        <button onclick="showSection('research')">Research Experience</button>
+        <button onclick="showSection('publications')">Publications</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('experience')">Professional Experience</button>
+    </div>
+    <div id="about" class="section active">
+        <h2>About Me</h2>
+        <p>I am Xun Fu, a graduate student specializing in large-scale data mining and machine learning. My work focuses on developing scalable clustering, active and semi-supervised learning, human-machine interaction, and neural network.  
+            My research has been published in various international conferences and journals. My goal is to develop advanced algorithms that address practical challenges in data mining.</p>
+        <p>Email: fuxun0529@163.com</p>
+        <p>Phone: +86 17381369260</p>
+            <div class="photo-gallery">
+            <img src="group_photo3.jpg" alt="Group Photo 3" class="group-photo">
+            <img src="group_photo1.jpg" alt="Group Photo 1" class="group-photo">
+            <img src="group_photo2.jpg" alt="Group Photo 2" class="group-photo">
+        </div>
+        </div>
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>Master in Computer Science and Technology</strong> (09-2022 to 06-2025 expected)<br>
+            Southwest Petroleum University, GPA: 3.89/5.00 (88.9/100.0)<br>
+            Dissertation: Active Clustering Method for Large Scale Data<br>
+            Advisors:</p>
+            <div class="advisor-info">
+                <img src="王.jpg" alt="Professor: Xin Wang" class="advisor-photo">
+                <p>Professor Xin Wang<br><a href="mailto:xinwang@swpu.edu.cn">xinwang@swpu.edu.cn</a><br>
+                <a href="https://www.swpu.edu.cn/scs/info/1168/5753.htm" target="_blank">Prof. Wang's Homepage</a></p>
+            </div>
+            <div class="advisor-info">
+                <img src="谢.jpeg" alt="Assistant Professor: Wen-Bo Xie" class="advisor-photo">
+                <p>Assistant Professor Wen-Bo Xie<br><a href="mailto:wenboxie@swpu.edu.cn">wenboxie@swpu.edu.cn</a><br>
+                <a href="https://www.swpu.edu.cn/scs/info/1170/7418.htm" target="_blank">Prof. Xie's Homepage</a></p>
+            </div>
+            <p><strong>Bachelor in Electrical and Computer Engineering</strong> (09-2018 to 06-2022)<br>
+            Southwest Petroleum University, GPA: 4.01/5.00 (90.1/100.0)<br>
+            Honor: Excellent graduates from Sichuan Province<br>
+            Honor: Postgraduate Recommendation</p>
+            <br>
+            <h2>Location of where I am studying in (Google Map)</h2>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.325837230715!2d104.06451081555002!3d30.572269681696543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36efba576a000001%3A0xa32d8d93ba223367!2sChengdu%2C%20Sichuan%2C%20China!5e0!3m2!1sen!2sus!4v1656446723456!5m2!1sen!2sus"
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+            
+            
+        </div>
+        
+        
+    <div id="research" class="section">
+        
+        <h2>Research Experience</h2>
+        <p><strong>Leading Research:</strong> Clustering is inherently subjective because a dataset can be partitioned in various ways, and different users have different preferences for clustering outcomes. This subjectivity is a key motivation for developing semi-supervised clustering methods, which incorporate prior knowledge to align clustering results more closely with user preferences. Typically, this prior knowledge is represented in the form of pairwise constraints that indicate whether pairs of data points should belong to the same or different clusters. In traditional semi-supervised clustering algorithms, these constraints are assumed to be predetermined. However, in real-world scenarios, the process of selecting these constraints is often performed randomly, which can lead to redundancy and noise, thereby reducing the effectiveness of the clustering process. To address these limitations, active clustering leverages an active learning framework to select high-value constraints, enhancing the quality of clustering. However, existing active clustering methods face scalability issues when handling a large number of constraints, limiting their applicability in real-time applications. My research addresses this challenge from three main perspectives:</p>
+        <ul>
+            <li><strong>How to Select High-Value Constraints:</strong> I developed a novel active clustering algorithm (ACDM) that utilizes a batch sampling strategy to dynamically select pairs of nodes from a sparsely constructed graph of the original dataset. This method addresses the balance between uncertainty and representativeness. 
+                Extensive experiments have demonstrated the algorithm's impressive performance, leading to its acceptance as a full paper at CIKM 2024. Additionally, I provided more comprehensive theoretical proofs and conducted extensive experiments in realistic clustering scenarios such as image clustering, voiceprint segmentation, and image segmentation, showcasing its potential application in numerous real-world settings. This work has been submitted to the TKDE journal and is currently under review.</li>
+            <li><strong>How to Utilize Constraints in the Clustering Process Efficiently:</strong> I designed another novel active clustering algorithm (CSE) that constructs an initial clustering framework using nearest neighbor searches to capture the distribution patterns of the dataset. By analyzing this framework, we can identify high-value pairs based on uncertainty and representativeness, utilizing these pairs to form pairwise constraints that optimize the clustering framework. Experiments indicate that CSE surpasses existing methods in terms of clustering quality and scalability. This research has been submitted to SIGKDD 2025 and is currently under peer review.</li>
+            <li><strong>How to Reduce Human Effort:</strong> I developed a novel constraint inference algorithm (DSL), which leverages the transitivity of must-link and cannot-link constraints through an innovative shortest-path reasoning method to infer new constraints. This approach significantly reduces the need for manual annotations and has been validated through detailed mathematical proofs and extensive experiments. This research has been submitted to Pattern Recognition and has already passed the first minor revision round.</li>
+        </ul>
+        <div id="video">
+            <h3>A demonstration of my developed application of active clustering (youtube)</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXiK-TzkmQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>    
+        <div id="video">
+            <h3>A demonstration of my developed application of active clustering (bilibili)</h3>
+            <iframe width="560" height="315" src="//player.bilibili.com/player.html?isOutside=true&aid=665218495&bvid=BV1pa4y1679b&cid=1378366332&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+        </div>    
+          
+        <p><strong>Participating Research:</strong></p>
+        <ul>
+            <li><strong>Hierarchical Clustering for Large Scale Data Analysis:</strong> In this research, my contributions included writing a comprehensive review of related work and conducting experiments on accuracy and scalability. Our research findings have been accepted by DASSFA and Information Science.</li>
+            <li><strong>Pattern Interestingness Evaluation:</strong> I designed an active learning-based framework to assess the interestingness of patterns, and I implemented the algorithm in code. This work has been submitted to the Journal of Nanjing University and is currently under review.</li>
+        </ul>
+    </div>
+        
+    <div id="publications" class="section">
+        <h2>Accepted</h2>
+        <ul>
+            <li>2024: <strong>Xun Fu</strong>, Wen-Bo Xie*, Bin Chen, Tao Deng, Tian Zou, Xin Wang, <i>"ACDM: An Effective and Scalable Active Clustering with Pairwise Constraint"</i>,<i>"Proceedings of the 32nd ACM International Conference on Information and Knowledge Management (CIKM)"</i>.</li>
+            <li>2024: Wen-Bo Xie*, Bin Chen, <strong>Xun Fu</strong>, Jun-Hao Shi, Yan-Li Lee, Xin Wang, <i>"Cost-effective hierarchical clustering with local density peak detection"</i>, <i>Information Science</i>.</li>
+            <li>2024: Bin Chen, Wen-bo Xie*, <strong>Xun Fu</strong>, Heng-ji Zhang, Xin Wang, <i>"Density-based scalable hierarchical clustering"</i>, <i>Journal of Nanjing University</i>.</li>
+            <li>2023: Wen-Bo Xie*, Bin Chen, Jun-Hao Shi, Yan-Li Lee, Xin Wang, <strong>Xun Fu</strong>, <i>"Cost-Effective Clustering by Aggregating Local Density Peaks"</i>, <i>International Conference on Database Systems for Advanced Applications (DASFAA)</i>.</li>
+        </ul>
+        <h2>Under Review</h2>
+        <ul>
+            <li><strong>Xun Fu</strong>, Wen-Bo Xie*, "XXX", <i>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</i>.</li>
+            <li><strong>Xun Fu</strong>, Wen-Bo Xie*, Tao Deng, Tian Zou, Xin Wang, "An Active Constrained Clustering Aims to Improve the Clustering Quality and the Scalability", <i>IEEE Transactions on Knowledge and Data Engineering</i>.</li>
+            <li>Wen-Bo Xie, <strong>Xun Fu*</strong>, Bin Chen, Yan-Li Lee, Tao Deng, Tian Zou, Xin Wang, Zhen Liu, Jaideep Srivastava, "Data Skeleton Learning: Scalable Active Clustering with Sparse Graph Structures", <i>Pattern Recognition</i>.</li>
+            <li>Lu Wang, <strong>Xun Fu</strong>, Ling-Zhen Shen, Xing Jiang, Xin Wang*, "Pattern interestingness evaluation based on active learning", <i>Journal of Nanjing University</i>.</li>
+        </ul>
+    </div>
+    
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+        <p><strong>Programming Languages:</strong> Python, Java, C++, Matlab, R</p>
+        <p><strong>Languages:</strong> Chinese (Native), English (IELTS: 6.5), Russian (Intermediate)</p>
+        <p><strong>Sports:</strong> Baseket Ball, Table Tennis, Soccer, Swimming, Billiard</p>
+    </div>
+    <div id="experience" class="section">
+        <h2>Professional Experience</h2>
+        <p><strong>Information Technology Specialist</strong> (06-2021 to 08-2021)<br>
+            Industrial and Commercial Bank of China (ICBC), Chengdu China<br>
+            Managed data security and performance optimizations for the bank's large-scale data warehouse systems.</p>
+            
+            <p><strong>Teaching Assistant in Big Data Analysis</strong> (09-2020 to 01-2021)<br>
+            Southwest Petroleum University, Chengdu China<br>
+            Assisted in teaching and grading for undergraduate students in Big Data Analysis.</p>
+            
+            <p><strong>Web Developer</strong> (06-2020 to 08-2020)<br>
+            Sichuan Aoyi Media Advertising Co. Ltd., Chengdu China<br>
+            Implemented visual designs into live environments, enhancing user interactions and functionality.</p>
+    
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const buttons = document.querySelectorAll('.menu button');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            buttons.forEach(button => {
+                button.classList.remove('active');
+                if (button.getAttribute('onclick').includes(sectionId)) {
+                    button.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
