@@ -13,7 +13,7 @@
             color: #333;
         }
         .header {
-            background: linear-gradient(135deg, #f2f4f5 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #f2f4f5 0%, #9e6b1f 100%);
             color: white;
             padding: 20px 40px;
             display: flex;
@@ -44,7 +44,6 @@
             text-align: center; /* 居中图片 */
             padding: 20px 0; /* 在图片上下添加一些空间 */
         }
-
         .advisor-info {
         display: flex;
         align-items: center;
@@ -65,6 +64,7 @@
             display: flex;
             justify-content: center;
             padding: 10px 0;
+            transition: background-color 0.5s ease;
         }
         .menu button {
             background: none;
@@ -74,18 +74,51 @@
             margin: 0 10px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.5s, color 0.5s, transform 0.3s;
         }
         .menu button:hover, .menu .active {
             background-color: #495057;
+            color: #ff0;
+            transform: scale(1.1);
         }
         .section {
             display: none;
             padding: 20px 40px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
         .section.active {
             display: block;
+            opacity: 1;
         }
+        .research-card, .advisor-info, .photo-gallery {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .research-card:hover, .advisor-info:hover, .photo-gallery:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .research-card h3, .advisor-info h4, .photo-gallery h4 {
+            color: #0056b3;
+        }
+
+.research-card h3 {
+    color: #0056b3;
+}
+
+.research-card p {
+    margin: 10px 0;
+}
+
+.section {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
     </style>
 </head>
 <body>
@@ -104,10 +137,9 @@
     <div id="about" class="section active">
         <h2>About Me</h2>
         <p>I am Xun Fu, a graduate student specializing in large-scale data mining and machine learning. My work focuses on developing scalable clustering, active and semi-supervised learning, human-machine interaction, and neural network.  
-            My research has been published in various international conferences and journals. My goal is to develop advanced algorithms that address practical challenges in data mining.</p>
+            My research has been published in various international conferences and journals. My goal is to develop advanced algorithms that address practical challenges in data mining and machine learning.</p>
         <p>Email: fuxun0529@163.com</p>
         <p>Phone: +86 17381369260</p>
-        <p>Brith Day: 05-29-2000</p>
             <div class="photo-gallery">
             <img src="group_photo3.jpg" alt="Group Photo 3" class="group-photo">
             <img src="group_photo1.jpg" alt="Group Photo 1" class="group-photo">
@@ -121,19 +153,22 @@
             <li>2024: Wen-Bo Xie*, Bin Chen, <strong>Xun Fu</strong>, Jun-Hao Shi, Yan-Li Lee, Xin Wang, <i>"Cost-effective hierarchical clustering with local density peak detection"</i>, <i>Information Science</i>.</li>
             <li>2024: Bin Chen, Wen-bo Xie*, <strong>Xun Fu</strong>, Heng-ji Zhang, Xin Wang, <i>"Density-based scalable hierarchical clustering"</i>, <i>Journal of Nanjing University</i>.</li>
             <li>2023: Wen-Bo Xie*, Bin Chen, Jun-Hao Shi, Yan-Li Lee, Xin Wang, <strong>Xun Fu</strong>, <i>"Cost-Effective Clustering by Aggregating Local Density Peaks"</i>, <i>International Conference on Database Systems for Advanced Applications (DASFAA)</i>.</li>
+            <li>2021: <strong>Xun Fu*</strong>, <i>"The Application of HTML5 in Web Interface Design"</i>,<i>China New Communications</i>.</li>
         </ul>
         <h2>Under Review</h2>
         <ul>
             <li><strong>Xun Fu</strong>, Wen-Bo Xie*, "XXX", <i>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)</i>.</li>
             <li><strong>Xun Fu</strong>, Wen-Bo Xie*, Tao Deng, Tian Zou, Xin Wang, "An Active Constrained Clustering Aims to Improve the Clustering Quality and the Scalability", <i>IEEE Transactions on Knowledge and Data Engineering</i>.</li>
+            <li><strong>Xun Fu</strong>, Wenbo Xie*, Bin Chen, Tao Deng, Tian Zou, Fang Huang, Lu Wang, Xin Wang, <i>"Efficient Active Clustering Method Based on Nearest Neighbor Graph"</i>,<i>Journal of Nanjing University</i>.</li>
             <li>Wen-Bo Xie, <strong>Xun Fu*</strong>, Bin Chen, Yan-Li Lee, Tao Deng, Tian Zou, Xin Wang, Zhen Liu, Jaideep Srivastava, "Data Skeleton Learning: Scalable Active Clustering with Sparse Graph Structures", <i>Pattern Recognition</i>.</li>
             <li>Lu Wang, <strong>Xun Fu</strong>, Ling-Zhen Shen, Xing Jiang, Xin Wang*, "Pattern interestingness evaluation based on active learning", <i>Journal of Nanjing University</i>.</li>
+        
         </ul>
     </div>
         <div id="education" class="section">
             <h2>Education</h2>
             <p><strong>Master in Computer Science and Technology</strong> (09-2022 to 06-2025 expected)<br>
-            Southwest Petroleum University, GPA: 3.70/5.00 (87.0/100.0)<br>
+            Southwest Petroleum University, GPA: 3.89/5.00 (88.9/100.0)<br>
             Dissertation: Active Clustering Method for Large Scale Data<br>
             Advisors:</p>
             <div class="advisor-info">
@@ -147,7 +182,7 @@
                 <a href="https://www.swpu.edu.cn/scs/info/1170/7418.htm" target="_blank">Prof. Xie's Homepage</a></p>
             </div>
             <p><strong>Bachelor in Electrical and Computer Engineering</strong> (09-2018 to 06-2022)<br>
-            Southwest Petroleum University, GPA: 4.00/5.00 (90.0/100.0)<br>
+            Southwest Petroleum University, GPA: 4.01/5.00 (90.1/100.0)<br>
             Honor: Excellent graduates from Sichuan Province<br>
             Honor: Postgraduate Recommendation</p>
             <br>
@@ -164,36 +199,74 @@
                     tabindex="0">
                 </iframe>
             </div>
-            
-            
         </div>
         
+        <div id="research" class="section">
+            <h2>Research Experience</h2>
+            <div class="research-card">
+            <div id="video">
+                <h3>A demonstration of my developed application of active clustering (youtube)</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wXiK-TzkmQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>  
+        </div>
+            <!-- Card 1: Hierarchical Clustering for Large-Scale Data -->
+            <div class="research-card">
+                <h3>Hierarchical Clustering for Large-Scale Data</h3>
+                <p><strong>Timeline:</strong> 10/2022-08/2023</p>
+                <p><strong>Advisors:</strong> Assistance Professor Wen-Bo Xie and Professor Xin Wang.</p>
+                <p><strong>Focus:</strong> Exploring hierarchical clustering methods to handle large datasets efficiently and effectively.</p>
+                <p><strong>Abstract:</strong> Hierarchical clustering plays a crucial role in real-world knowledge discovery and data mining applications. This powerful technique provides tree-shaped results that are typically considered data summaries. However, achieving well-organized outputs requires a challenging trade-off between computational complexity (both in time and space) and clustering accuracy, especially in big data scenarios. To address this challenge, we propose a novel agglomerative algorithm for hierarchical clustering. Our algorithm constructs tree-shaped subclusters using a nearest-neighbor chain search. Next, the proxy (root) for each subcluster is identified using a local density peak detection mechanism, which guides the subsequent aggregation. Additionally, we propose a non-parametric variant to facilitate the easy implementation of the algorithm in real-world applications. Comprehensive experimental studies on fourteen real-world and synthetic datasets demonstrate that our algorithm surpasses other benchmarks in terms of clustering accuracy, response time, and memory footprint in most cases. Notably, our proposed algorithm can handle up to two million data points on a personal computer, further verifying its cost-effectiveness.</p>
+                <p><strong>Result:</strong> Accepted by DASSFA and Information Science journal.</p>
+            </div>
+ 
+            <!-- Card 2: Dynamic Constraint Selection for Active Clustering -->
+            <div class="research-card">
+                <h3>Dynamic Constraint Selection for Active Clustering</h3>
+                <p><strong>Timeline:</strong> 04/2023-04/2024</p>
+                <p><strong>Advisors:</strong> Assistance Professor Wen-Bo Xie and Professor Xin Wang.</p>
+                <p><strong>Focus:</strong> Enhancing active clustering algorithms through dynamic constraint selection to improve adaptability and precision.</p>
+                <p><strong>Abstract:</strong> Clustering is fundamentally a subjective task: a single dataset can be validly clustered in various ways, and without further information, clustering systems cannot determine the appropriate clustering to perform. This underscores the importance of integrating constraints into clustering, enabling users to convey their preferences to the system. Active constraint-based clustering approaches prioritize the identification of the most valuable constraints to inquire about, striving to achieve effective clustering with the minimal number of constraints needed. We propose an Active Clustering with Diffusion Model (ACDM). ACDM applies the nearest-neighbor technique to construct a diffusion graph, and utilizes an online framework to refine the clustering result iteratively. In each iteration, (a) nodes with high uncertainty and representativeness are selected in batch mode, (b) then a novel neighborhood-set-based query is used for categorizing the selected nodes, using pairwise constraints, and (c) the categorized nodes are used as source nodes in the diffusion model for cluster refinement. We experimentally demonstrate that ACDM outperforms the state of the art in terms of clustering quality as well as scalability.</p>
+                <p><strong>Result:</strong> Accepted in CIKM 2024 and its extension is currently under review at the TKDE journal.</p>
+            </div>
+            <!-- <div id="video">
+                <h3>A demonstration of my developed application of active clustering (bilibili)</h3>
+                <iframe width="560" height="315" src="//player.bilibili.com/player.html?isOutside=true&aid=665218495&bvid=BV1pa4y1679b&cid=1378366332&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>  -->
+            <!-- Card 3: Automation of Constraint Annotation -->
+            <div class="research-card">
+                <h3>Automation of Constraint Annotation</h3>
+                <p><strong>Timeline:</strong> 11/2023-05/2024</p>
+                <p><strong>Advisors:</strong> Assistance Professor Wen-Bo Xie and Professor Xin Wang.</p>
+                <p><strong>Focus:</strong> Reducing manual intervention in clustering by automating constraint annotation processes.</p>
+                <p><strong>Abstract:</strong> In this work, we focus on the efficiency and scalability of pairwise constraint-based active clustering, crucial for processing large-scale data in applications such as data mining, knowledge annotation, and AI model pre-training. Our goals are threefold: (1) to reduce computational costs for iterative clustering updates; (2) to enhance the impact of user-provided constraints to minimize annotation requirements for precise clustering; and (3) to cut down memory usage in practical deployments. To achieve these aims, we propose a graph-based active clustering algorithm that utilizes two sparse graphs: one for representing relationships between data (our proposed data skeleton) and another for updating this data skeleton. These two graphs work in concert, enabling the refinement of connected subgraphs within the data skeleton to create nested clusters. Our empirical analysis confirms that the proposed algorithm consistently facilitates more accurate clustering with dramatically less input of user-provided constraints, and outperforms its counterparts in terms of computational performance and scalability while maintaining robustness across various distance metrics.</p>
+                <p><strong>Result:</strong> Under review in Pattern Recognition (minor revision).</p>
+            </div>
         
-    <div id="research" class="section">
+            <!-- Card 4: Evaluation of Pattern Interestingness -->
+            <div class="research-card">
+                <h3>Evaluation of Pattern Interestingness</h3>
+                <p><strong>Timeline:</strong> 11/2023-07/2024</p>
+                <p><strong>Advisor:</strong> Professor Xin Wang.</p>
+                <p><strong>Focus:</strong> Assessing the interestingness of graph patterns with human-machine interaction.</p>
+                <p><strong>Abstract:</strong> Frequent Pattern Mining (FPM) is one of the core problems in graph data analysis and mining, aiming to discover patterns with support levels not lower than a specified threshold from large-scale graph data. Traditional frequent pattern mining algorithms rely on support for pruning, and the returned results often contain a large number of "redundant" patterns; Although top-k pattern mining algorithms only return k frequent patterns, they mainly evaluate patterns based on "objective" indicators such as support, making it difficult to fully reflect users' subjective interests and preferences. In response to the above issues, this paper proposes a Pattern Interest Evaluation with Active Learning (PIEAL) method based on active learning. This method uses an active learning strategy to select representative patterns from the frequent patterns mined from the sampling graph, and collects user preferences for these patterns through limited human-computer interactions. It then predicts the interest scores of the patterns and guides the algorithm to discover patterns that interest the user. In the human-computer interaction process, PIEAL adopts a pairwise comparison based strategy to collect user preference feedback on patterns, effectively reducing the difficulty of subjective evaluation by users. The experimental results on real datasets show that PIEAL only requires a small amount of human-computer interaction to discover patterns that users are interested in, and its test set accuracy can reach up to 95 percent.</p>
+                <p><strong>Result:</strong> Research is under review at the Journal of Nanjing University.</p>
+            </div>
         
-        <h2>Research Experience</h2>
-        <p><strong>Leading Research:</strong> Clustering is inherently subjective because a dataset can be partitioned in various ways, and different users have different preferences for clustering outcomes. This subjectivity is a key motivation for developing semi-supervised clustering methods, which incorporate prior knowledge to align clustering results more closely with user preferences. Typically, this prior knowledge is represented in the form of pairwise constraints that indicate whether pairs of data points should belong to the same or different clusters. In traditional semi-supervised clustering algorithms, these constraints are assumed to be predetermined. However, in real-world scenarios, the process of selecting these constraints is often performed randomly, which can lead to redundancy and noise, thereby reducing the effectiveness of the clustering process. To address these limitations, active clustering leverages an active learning framework to select high-value constraints, enhancing the quality of clustering. However, existing active clustering methods face scalability issues when handling a large number of constraints, limiting their applicability in real-time applications. My research addresses this challenge from three main perspectives:</p>
-        <ul>
-            <li><strong>How to Select High-Value Constraints:</strong> I developed a novel active clustering algorithm (ACDM) that utilizes a batch sampling strategy to dynamically select pairs of nodes from a sparsely constructed graph of the original dataset. This method addresses the balance between uncertainty and representativeness. 
-                Extensive experiments have demonstrated the algorithm's impressive performance, leading to its acceptance as a full paper at CIKM 2024. Additionally, I provided more comprehensive theoretical proofs and conducted extensive experiments in realistic clustering scenarios such as image clustering, voiceprint segmentation, and image segmentation, showcasing its potential application in numerous real-world settings. This work has been submitted to the TKDE journal and is currently under review.</li>
-            <li><strong>How to Utilize Constraints in the Clustering Process Efficiently:</strong> I designed another novel active clustering algorithm (CSE) that constructs an initial clustering framework using nearest neighbor searches to capture the distribution patterns of the dataset. By analyzing this framework, we can identify high-value pairs based on uncertainty and representativeness, utilizing these pairs to form pairwise constraints that optimize the clustering framework. Experiments indicate that CSE surpasses existing methods in terms of clustering quality and scalability. This research has been submitted to SIGKDD 2025 and is currently under peer review.</li>
-            <li><strong>How to Reduce Human Effort:</strong> I developed a novel constraint inference algorithm (DSL), which leverages the transitivity of must-link and cannot-link constraints through an innovative shortest-path reasoning method to infer new constraints. This approach significantly reduces the need for manual annotations and has been validated through detailed mathematical proofs and extensive experiments. This research has been submitted to Pattern Recognition and has already passed the first minor revision round.</li>
-        </ul>
-        <div id="video">
-            <h3>A demonstration of my developed application of active clustering (youtube)</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/wXiK-TzkmQE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>    
-        <div id="video">
-            <h3>A demonstration of my developed application of active clustering (bilibili)</h3>
-            <iframe width="560" height="315" src="//player.bilibili.com/player.html?isOutside=true&aid=665218495&bvid=BV1pa4y1679b&cid=1378366332&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-        </div>    
-          
-        <p><strong>Participating Research:</strong></p>
-        <ul>
-            <li><strong>Hierarchical Clustering for Large Scale Data Analysis:</strong> In this research, my contributions included writing a comprehensive review of related work and conducting experiments on accuracy and scalability. Our research findings have been accepted by DASSFA and Information Science.</li>
-            <li><strong>Pattern Interestingness Evaluation:</strong> I designed an active learning-based framework to assess the interestingness of patterns, and I implemented the algorithm in code. This work has been submitted to the Journal of Nanjing University and is currently under review.</li>
-        </ul>
-    </div>
+            <!-- Card 5: Scalability and Quality Optimization in Constrained Clustering -->
+            <div class="research-card">
+                <h3>Scalability and Quality Optimization in Constrained Clustering</h3>
+                <p><strong>Timeline:</strong> 05/2024-08/2024</p>
+                <p><strong>Advisor:</strong> Assistance Professor Wen-Bo Xie and Professor Xin Wang.</p>
+                <p><strong>Focus:</strong> Developing methodologies to enhance the scalability and quality of clustering frameworks through efficient constraint selection.</p>
+                <p><strong>Abstract:</strong> Confidential</p>
+                <p><strong>Result:</strong> Submitted to SIGKDD 2025 for further academic evaluation.</p>
+            </div>
+            <!-- <div class="research-card">
+
+            </div> -->
+        </div>
+        
+    
         
 
     
@@ -205,15 +278,15 @@
     </div>
     <div id="experience" class="section">
         <h2>Professional Experience</h2>
-        <p><strong>Information Technology Specialist</strong> (06-2021 to 08-2021)<br>
+        <p><strong>Information Technology Specialist</strong> (06/2021 to 09/2021)<br>
             Industrial and Commercial Bank of China (ICBC), Chengdu China<br>
             Managed data security and performance optimizations for the bank's large-scale data warehouse systems.</p>
             
-            <p><strong>Teaching Assistant in Big Data Analysis</strong> (09-2020 to 01-2021)<br>
+            <p><strong>Teaching Assistant in Big Data Analysis</strong> (09/2020 to 01/2021)<br>
             Southwest Petroleum University, Chengdu China<br>
             Assisted in teaching and grading for undergraduate students in Big Data Analysis.</p>
             
-            <p><strong>Web Developer</strong> (06-2020 to 08-2020)<br>
+            <p><strong>Web Developer</strong> (06/2020 to 09/2020)<br>
             Sichuan Aoyi Media Advertising Co. Ltd., Chengdu China<br>
             Implemented visual designs into live environments, enhancing user interactions and functionality.</p>
     
@@ -224,14 +297,16 @@
             const buttons = document.querySelectorAll('.menu button');
             sections.forEach(section => {
                 section.style.display = 'none';
+                section.classList.remove('active');
             });
-            document.getElementById(sectionId).style.display = 'block';
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => { activeSection.classList.add('active'); }, 10); // Delay for CSS transition
+            
             buttons.forEach(button => {
                 button.classList.remove('active');
-                if (button.getAttribute('onclick').includes(sectionId)) {
-                    button.classList.add('active');
-                }
             });
+            document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
         }
     </script>
 </body>
